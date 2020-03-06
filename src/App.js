@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+
+import Container from './components/Container';
+import RGBInput from './components/RGBInput';
+import Conversor from './components/Conversor';
+
+import store from './store';
+
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Container>
+        <h1 className="text-center">
+          Processamento de Imagens
+          <small style={{ fontWeight: '500' }}> | Conversão RGB</small>
+        </h1>
+        <RGBInput />
+        <Conversor />
+        <h4 className="text-center">
+          JOÃO VITOR VERONESE VIEIRA
+          <small> | <a href="https://github.com/joao-vieira">PERFIL </a>ou<a href="https://github.com/joao-vieira"> REPOSITÓRIO</a></small>
+        </h4>
+      </Container>
+      <GlobalStyle />
+    </Provider>
   );
 }
 
