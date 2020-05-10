@@ -17,11 +17,13 @@ function App() {
           Processamento de Imagens
           <small style={{ fontWeight: '500' }}> | Conversão RGB</small>
         </h1>
+
         <RGBInput />
         <Conversor />
+
         <h4 className="text-center">
-          JOÃO VITOR VERONESE VIEIRA
-          <small> | <a href="https://github.com/joao-vieira">PERFIL </a>ou<a href="https://github.com/joao-vieira"> REPOSITÓRIO</a></small>
+          Manual do Front
+          <small> | <a href="https://github.com/manualdofront">PERFIL </a>ou<a href="https://github.com/joao-vieira"> REPOSITÓRIO</a></small>
         </h4>
       </Container>
       <GlobalStyle />
